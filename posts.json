@@ -126,5 +126,13 @@
     "username": "api-andy",
     "date": "2023-12-20",
     "content": "REST vs SOAP - the ultimate web service showdown! RESTful APIs are like that chill friend who keeps things simple and stateless, while SOAP is like that dramatic friend who needs a whole envelope just to say hello. REST gives us clean URLs, standard HTTP methods (GET, POST, PUT, DELETE), and JSON responses that don't require a PhD to understand. SOAP, on the other hand, comes with more overhead than a corporate meeting about meetings. Modern developers love REST for its simplicity, scalability, and the fact that you don't need to write a novel-length WSDL file just to make a request. Whether you're building microservices or consuming third-party APIs, remember: keep it RESTful, keep it simple, and save the drama for your favorite TV show!"
+  },
+  {
+    "slug": "git-commits-like-teenagers-always-say-fix-stuff",
+    "title": "Why Are Git Commits Like Teenagers? They Always Say 'Fix Stuff' and Never Explain What They Actually Did!",
+    "author": "Version Control Victor",
+    "username": "version-control-victor",
+    "date": "2023-12-18",
+    "content": "We've all been there - staring at a commit history that reads like a teenager's diary: 'fix stuff', 'idk why this works now', 'YOLO push to main', and the classic 'asdfghjkl'. Good commit messages are like good documentation - they save your future self from having a breakdown at 3am. A proper commit message should explain the what, why, and how of your changes. Instead of 'fixed bug', try 'fix null pointer exception in user login validation'. Your teammates (and your future self) will thank you when they're trying to understand why that one line was changed six months ago. Remember: commits are love letters to your future debugging sessions - make them count! Pro tip: if you can't explain your commit in one clear sentence, maybe you're committing too many changes at once."
   }
 ] 
