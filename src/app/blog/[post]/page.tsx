@@ -75,11 +75,9 @@ export default function PostPage() {
         <div className="flex items-center space-x-4 text-gray-600">
           <span>
             By {post.author}
-            {post.twitter && (
-              <span className="text-gray-400 ml-2">
-                • {post.twitter.followers.toLocaleString()} followers on @{post.twitter.username}
-              </span>
-            )}
+            <span className="text-gray-400 ml-2">
+              • {post.twitter.followers.toLocaleString()} followers on @{post.twitter.username}
+            </span>
           </span>
           <span>•</span>
           <time dateTime={post.date}>
