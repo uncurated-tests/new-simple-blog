@@ -13,6 +13,7 @@ export async function GET() {
       slug: post.slug,
       title: post.title,
       author: post.author,
+      username: post.username,
       date: post.date,
     }))
     
