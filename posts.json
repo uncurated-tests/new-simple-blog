@@ -118,5 +118,13 @@
     "username": "indoor-ian",
     "date": "2023-12-22",
     "content": "Screen glare is the natural enemy of code visibility! But this joke touches on something deeper - the stereotype of programmers as cave-dwelling, nocturnal creatures. The truth is, many developers love the outdoors and maintain healthy work-life balance. However, there's something to be said for a good development environment: proper lighting, comfortable seating, minimal distractions, and yes, readable screens. Whether you're working from a sunny café or a cozy home office, the key is finding an environment where you can focus and be productive. Pro tip: take regular breaks, get some natural light, and remember that the best code often comes from a well-rested, healthy developer!"
+  },
+  {
+    "slug": "programmers-prefer-restful-apis-hate-soap-opera-drama",
+    "title": "Why Do Programmers Prefer RESTful APIs? Because They Hate SOAP Opera Drama!",
+    "author": "API Andy",
+    "username": "api-andy",
+    "date": "2023-12-20",
+    "content": "REST vs SOAP - the ultimate web service showdown! RESTful APIs are like that chill friend who keeps things simple and stateless, while SOAP is like that dramatic friend who needs a whole envelope just to say hello. REST gives us clean URLs, standard HTTP methods (GET, POST, PUT, DELETE), and JSON responses that don't require a PhD to understand. SOAP, on the other hand, comes with more overhead than a corporate meeting about meetings. Modern developers love REST for its simplicity, scalability, and the fact that you don't need to write a novel-length WSDL file just to make a request. Whether you're building microservices or consuming third-party APIs, remember: keep it RESTful, keep it simple, and save the drama for your favorite TV show!"
   }
 ] 
