@@ -2,17 +2,11 @@
 
 import Link from 'next/link'
 import { usePost } from '@/lib/hooks'
-import { use } from 'react'
+import { useParams } from 'next/navigation'
 
-interface PostPageProps {
-  params: Promise<{
-    post: string
-  }>
-}
-
-export default function PostPage({ params }: PostPageProps) {
-  const resolvedParams = use(params)
-  const { post, isLoading, isError } = usePost(resolvedParams.post)
+export default function PostPage() {
+  const params = useParams()
+  const { post, isLoading, isError } = usePost(params?.post as string)
 
   if (isError) {
     return (
