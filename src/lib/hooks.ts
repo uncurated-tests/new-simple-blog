@@ -12,6 +12,10 @@ export interface PostSummary {
 
 export interface Post extends PostSummary {
   content: string
+  twitter: {
+    followers: number
+    username: string
+  }
 }
 
 // Generic fetcher function
