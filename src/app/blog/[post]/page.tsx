@@ -22,7 +22,7 @@ export default function PostPage({ params }: PostPageProps) {
           <p className="text-red-600 mb-4">The post you're looking for doesn't exist.</p>
           <Link 
             href="/blog"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+            className="inline-flex items-center text-gray-500 hover:text-gray-700 font-medium"
           >
             ← Back to Blog
           </Link>
@@ -54,7 +54,7 @@ export default function PostPage({ params }: PostPageProps) {
           <p className="text-gray-600">Post not found.</p>
           <Link 
             href="/blog"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mt-4"
+            className="inline-flex items-center text-gray-500 hover:text-gray-700 font-medium mt-4"
           >
             ← Back to Blog
           </Link>
@@ -68,7 +68,7 @@ export default function PostPage({ params }: PostPageProps) {
       <div className="mb-6">
         <Link 
           href="/blog"
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mb-6"
+          className="inline-flex items-center text-gray-500 hover:text-gray-700 font-medium mb-6"
         >
           ← Back to Blog
         </Link>
