@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fa;
+  --foreground: #212529;
 }
 
 @theme inline {
@@ -12,10 +12,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Force light mode for better readability */
+/* Use a soft, neutral background that's easier on the eyes */
 body {
-  background: #ffffff !important;
-  color: #171717 !important;
+  background: #f8f9fa !important;
+  color: #212529 !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
