@@ -79,7 +79,14 @@ export default function PostPage({ params }: PostPageProps) {
           {post.title}
         </h1>
         <div className="flex items-center space-x-4 text-gray-600">
-          <span>By {post.author} <span className="text-gray-500">@{post.username}</span></span>
+          <span>
+            By {post.author} <span className="text-gray-500">@{post.username}</span>
+            {post.twitter && (
+              <span className="text-gray-400 ml-2">
+                • {post.twitter.followers.toLocaleString()} followers on @{post.twitter.username}
+              </span>
+            )}
+          </span>
           <span>•</span>
           <time dateTime={post.date}>
             {new Date(post.date).toLocaleDateString('en-US', {

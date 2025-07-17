@@ -21,9 +21,17 @@ export async function GET(
       )
     }
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const authorFollowers = await new Promise(resolve => setTimeout(resolve, 2000)).then(() => {
+      return Math.floor(Math.random() * (10000 - 100 + 1)) + 100
+    });
     
-    return NextResponse.json(post)
+    return NextResponse.json({
+      ...post,
+      twitter: {
+        followers: authorFollowers,
+        username: post.username,
+      }
+    })
   } catch (error) {
     return NextResponse.json(
       { error: 'Failed to fetch post' },
