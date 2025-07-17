@@ -9,7 +9,6 @@ export default function BlogPage() {
   if (isError) {
     return (
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog</h1>
         <div className="bg-red-50 border border-red-200 rounded-lg p-4">
           <p className="text-red-800">Failed to load posts. Please try again later.</p>
         </div>
@@ -20,7 +19,6 @@ export default function BlogPage() {
   if (isLoading) {
     return (
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Blog</h1>
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="bg-white rounded-lg shadow-sm p-6 border animate-pulse">
@@ -36,7 +34,6 @@ export default function BlogPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Blog</h1>
       <div className="space-y-6">
         {posts?.map((post) => (
           <article key={post.slug} className="bg-white rounded-lg shadow-sm p-6 border hover:shadow-md transition-shadow">
