@@ -43,7 +43,7 @@ export default function BlogPage() {
               </h2>
             </Link>
             <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
-              <span>By {post.author} <span className="text-gray-500">@{post.username}</span></span>
+              <span>By {post.author}</span>
               <span>•</span>
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString('en-US', {

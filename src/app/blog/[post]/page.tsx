@@ -80,7 +80,7 @@ export default function PostPage({ params }: PostPageProps) {
         </h1>
         <div className="flex items-center space-x-4 text-gray-600">
           <span>
-            By {post.author} <span className="text-gray-500">@{post.username}</span>
+            By {post.author}
             {post.twitter && (
               <span className="text-gray-400 ml-2">
                 • {post.twitter.followers.toLocaleString()} followers on @{post.twitter.username}
