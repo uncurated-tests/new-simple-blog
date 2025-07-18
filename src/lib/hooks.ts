@@ -31,8 +31,11 @@ export function usePosts() {
       // Fetch and cache individual posts in parallel
       data.forEach(async (postSummary) => {
         try {
-          // Pre-populate the cache for this individual post
-          mutate(`/api/posts/${postSummary.slug}`, postSummary, {
+          // Pre-populate the cache for this individual post with default twitter data
+          mutate(`/api/posts/${postSummary.slug}`, {
+            ...postSummary,
+            twitter: { followers: 0, username: '' }
+          }, {
             revalidate: false,
             populateCache: true,
           })
