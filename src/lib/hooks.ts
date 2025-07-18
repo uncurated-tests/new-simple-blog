@@ -1,4 +1,5 @@
-import useSWR from 'swr'
+import { useEffect } from 'react'
+import useSWR, { mutate } from 'swr'
 
 // Define types for our data
 export interface PostSummary {
@@ -23,6 +24,22 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json())
 // Custom hook to fetch all posts
 export function usePosts() {
   const { data, error, isLoading } = useSWR<PostSummary[]>('/api/posts', fetcher)
+
+  // Pre-populate individual post caches when posts list is loaded
+  useEffect(() => {
+    if (data && !error) {
+      const fetchAndCachePost = async (slug) => {
+        try {
+          const post = await fetcher(`/api/posts/${slug}`);
+          mutate(`/api/posts/${slug}`, post, { revalidate: false, populateCache: true });
+        } catch (error) {
+          console.warn(`Failed to preload post ${slug}:`, error);
+        }
+      };
+
+      data.forEach(postSummary => fetchAndCachePost(postSummary.slug));
+    }
+  }, [data, error]);
 
   return {
     posts: data,
