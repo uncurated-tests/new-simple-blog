@@ -31,8 +31,10 @@ export function usePosts() {
       // Fetch and cache individual posts in parallel
       data.forEach(async (postSummary) => {
         try {
+          // Fetch the full post data
+          const post = await fetcher(`/api/posts/${postSummary.slug}`)
           // Pre-populate the cache for this individual post
-          mutate(`/api/posts/${postSummary.slug}`, postSummary, {
+          mutate(`/api/posts/${postSummary.slug}`, post, {
             revalidate: false,
             populateCache: true,
           })
@@ -63,4 +65,4 @@ export function usePost(slug: string) {
     isLoading,
     isError: error
   }
-} 
+}
